@@ -1,8 +1,9 @@
 // Book class - to represent a book
 class Book {
-  constructor(title, author) {
+  constructor(title, author, id) {
     this.title = title;
     this.author = author;
+    this.id = id;
   }
 }
 
@@ -20,6 +21,7 @@ class UI {
     row.innerHTML = `
         <div>${book.title}</div>
         <div>${book.author}</div>
+        <div>${book.id}</div>
         <div><a href="#" class="delete">Remove</a></div>
     `;
     list.appendChild(row);
@@ -46,6 +48,7 @@ class UI {
   static clearFields() {
     document.querySelector('#title').value = '';
     document.querySelector('#author').value = '';
+    document.querySelector('#id').value = '';
   }
 }
 
@@ -93,36 +96,26 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   // get form values
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
+  const id = `${title} ${author}`;
+  console.log(id);
 
   // validate fields
-  if (title === '' || author === '') {
+  if (title === '' || author === '' || id === '') {
     UI.showAlert('Please fill in all fields', 'danger');
   } else {
-    // Instatiate Book
-    const book = new Book(title, author);
-
-    // add book to UI
-    UI.addBookToList(book);
-
-    // add book to store
-    Store.addBook(book);
-
-    // Show success message
-    UI.showAlert('Book Added', 'success');
-
-    // Clear fields
-    UI.clearFields();
+    const book = new Book(title, author, id); // Instatiate Book
+    UI.addBookToList(book); // add book to UI
+    Store.addBook(book); // add book to store
+    UI.showAlert('Book Added', 'success'); // Show success message
+    UI.clearFields(); // Clear fields
   }
 });
 
 // Event - Remove a book
 document.querySelector('#book-list').addEventListener('click', (e) => {
-  // remove book from UI
-  UI.deleteBook(e.target);
+  UI.deleteBook(e.target); // remove book from UI
 
   // remove book from store
-  // Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
-
-  // Show success message
-  UI.showAlert('Book Removed', 'success');
+  Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+  UI.showAlert('Book Removed', 'success'); // Show success message
 });
