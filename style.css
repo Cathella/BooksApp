@@ -86,3 +86,16 @@ form button {
   align-self: flex-end;
   font-size: 1.3em;
 }
+
+.alert-success,
+.alert-danger {
+  background-color: #abf4ab;
+  padding: .7em 1em;
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: .5em;
+}
+
+.alert-danger {
+  background-color: #fcb9b9;
+}

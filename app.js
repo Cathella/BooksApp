@@ -34,14 +34,14 @@ class UI {
 
   static showAlert(message, className) {
     const div = document.createElement('div');
-    div.className = `alert alert-${className}`;
+    div.className = `alert-${className}`;
     div.appendChild(document.createTextNode(message));
     const container = document.querySelector('.container');
     const booklist = document.querySelector('#book-list');
     container.insertBefore(div, booklist);
 
-    // Disappear in 3 seconds
-    setTimeout(() => document.querySelector('.alert').remove(), 3000);
+    // Disappear in 2 seconds
+    setTimeout(() => document.querySelector(`.alert-${className}`).remove(), 2000);
   }
 
   static clearFields() {
