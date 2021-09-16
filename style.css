@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+* {
+  font-family: 'Comic Neue', cursive;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
 h1 {
   text-align: center;
   font-weight: bold;
@@ -16,8 +27,9 @@ p {
   justify-content: space-between;
   background-color: #fff;
   margin: 0;
-  padding: .6em .5em;
+  padding: .5em;
   font-weight: bold;
+  font-size: 1.2em;
 }
 
 p:nth-child(odd) {
@@ -30,11 +42,12 @@ p:nth-child(odd) {
 
 button {
   border: 2px solid black;
-  padding: .5em 1.2em;
+  padding: .3em 1em;
   box-shadow: 4px 4px 0 black;
   background: white;
   color: black;
   font-weight: bold;
+  font-size: 1.1em;
 }
 
 form {
@@ -44,9 +57,26 @@ form {
 
 h2 {
   text-align: center;
+  font-size: 2em;
 }
 
 form div {
   display: flex;
   flex-direction: column;
+}
+
+input {
+  height: 40px;
+  border: 2px solid black;
+  margin: 10px 0 0;
+  padding-left: 15px;
+  font-size: 1.3em;
+}
+
+form button {
+  margin: 13px 0;
+  padding: .5em 0;
+  width: 45%;
+  align-self: flex-end;
+  font-size: 1.3em;
 }
