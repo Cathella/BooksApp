@@ -19,10 +19,9 @@ class UI {
 
     const row = document.createElement('p');
     row.innerHTML = `
-        <div>${book.title}</div>
-        <div>${book.author}</div>
-        <div>${book.id}</div>
-        <div><a href="#" class="delete">Remove</a></div>
+        <div>"${book.title}" by ${book.author}</div>
+        <div class="hide">${book.id}</div>
+        <div><button class="delete">Remove</button></div>
     `;
     list.appendChild(row);
   }

@@ -1,0 +1,52 @@
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+section {
+  border: 4px solid black;
+  margin: 0 0 60px 0;
+}
+
+p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  margin: 0;
+  padding: .6em .5em;
+  font-weight: bold;
+}
+
+p:nth-child(odd) {
+  background-color: #ccc;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  border: 2px solid black;
+  padding: .5em 1.2em;
+  box-shadow: 4px 4px 0 black;
+  background: white;
+  color: black;
+  font-weight: bold;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
