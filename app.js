@@ -49,6 +49,32 @@ class UI {
     document.querySelector('#author').value = '';
     document.querySelector('#id').value = '';
   }
+
+  static showDate() {
+    let current = new Date();
+    let month = new Array();
+    month[0] = "January";
+    month[1] = "February";
+    month[2] = "March";
+    month[3] = "April";
+    month[4] = "May";
+    month[5] = "June";
+    month[6] = "July";
+    month[7] = "August";
+    month[8] = "September";
+    month[9] = "October";
+    month[10] = "November";
+    month[11] = "December";
+
+    let cDate = month[current.getMonth()] + ' ' + current.getDate() + "th " + current.getFullYear() + ",";
+    let cTime = current.getHours() + ":" + current.getMinutes() + ":" + current.getSeconds();
+    let dateTime = cDate + ' ' + cTime;
+
+    const myDate = document.querySelector('#date');
+    const showMyDate = document.createElement('div');
+    showMyDate.innerHTML = `${dateTime}`;
+    myDate.appendChild(showMyDate);
+  }
 }
 
 // Store class - handles storage
@@ -86,6 +112,9 @@ class Store {
 
 // Event - display books
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
+
+// Show date
+document.addEventListener('DOMContentLoaded', UI.showDate);
 
 // Event - Add a book
 document.querySelector('#book-form').addEventListener('submit', (e) => {

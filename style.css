@@ -31,7 +31,7 @@ nav a:last-child {
   padding-right: 0;
 }
 
-.date {
+#date {
   text-align: right;
 }
 
@@ -84,7 +84,7 @@ button {
   border: 2px solid black;
   padding: .3em 1em;
   box-shadow: 4px 4px 0 black;
-  background: white;
+  background-color: #fcb9b9;
   color: black;
   font-weight: bold;
   font-size: 1.1em;
@@ -92,7 +92,7 @@ button {
 }
 
 button:hover {
-  background: #ccc;
+  background: #fff;
 }
 
 form {
@@ -129,7 +129,7 @@ form button {
 }
 
 .contact {
-  width: 80%;
+  width: 70%;
   margin: 0 auto 3em;
   font-size: 1.2em;
   line-height: 1.7em;
@@ -142,6 +142,7 @@ footer {
   background: #ccc;
   position: relative;
   bottom: 0;
+  margin-top: 5em;
 }
 
 footer a {
