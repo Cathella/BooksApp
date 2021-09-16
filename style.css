@@ -125,6 +125,7 @@ form button {
   padding: .5em 1em;
   align-self: flex-end;
   font-size: 1.3em;
+  background-color: #fce100;
 }
 
 .contact {
@@ -132,4 +133,17 @@ form button {
   margin: 0 auto 3em;
   font-size: 1.2em;
   line-height: 1.7em;
+}
+
+footer {
+  border: 2px solid black;
+  text-align: center;
+  padding: 1em 0;
+  background: #ccc;
+  position: relative;
+  bottom: 0;
+}
+
+footer a {
+  color: black;
 }
