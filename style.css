@@ -15,7 +15,7 @@ nav {
   justify-content: space-between;
   border: 2px solid black;
   padding: .7em 1em;
-  margin: 0 0 1em 0;
+  margin: 0 0 .5em 0;
   font-size: 1.3em;
 }
 
@@ -38,7 +38,21 @@ nav a:last-child {
 h1 {
   text-align: center;
   font-weight: bold;
-  font-size: 2.5em;
+  font-size: 2em;
+  margin: 2em 0 01em 0;
+}
+
+.alert-success,
+.alert-danger {
+  background-color: #abf4ab;
+  padding: .7em 1em;
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: .5em;
+}
+
+.alert-danger {
+  background-color: #fcb9b9;
 }
 
 section {
@@ -108,20 +122,14 @@ input {
 form button {
   margin: 13px 0;
   padding: .5em 0;
-  width: 45%;
+  padding: .5em 1em;
   align-self: flex-end;
   font-size: 1.3em;
 }
 
-.alert-success,
-.alert-danger {
-  background-color: #abf4ab;
-  padding: .7em 1em;
-  text-align: center;
-  font-size: 1.1em;
-  margin-bottom: .5em;
-}
-
-.alert-danger {
-  background-color: #fcb9b9;
+.contact {
+  width: 80%;
+  margin: 0 auto 3em;
+  font-size: 1.2em;
+  line-height: 1.7em;
 }
