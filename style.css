@@ -48,11 +48,17 @@ button {
   color: black;
   font-weight: bold;
   font-size: 1.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ccc;
 }
 
 form {
-  width: 50%;
-  margin: 0 auto;
+  width: 65%;
+  margin: 0 auto 50px;
+
 }
 
 h2 {
