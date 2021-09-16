@@ -9,6 +9,32 @@
   margin: 0 auto;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: .7em 1em;
+  margin: 0 0 1em 0;
+  font-size: 1.3em;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  border-right: 2px solid black;
+  padding: 0 1em;
+}
+
+nav a:last-child {
+  border: none;
+  padding-right: 0;
+}
+
+.date {
+  text-align: right;
+}
+
 h1 {
   text-align: center;
   font-weight: bold;
