@@ -12,36 +12,41 @@
     <nav>
       <div class="logo">Awesome Books</div>
       <div>
-        <a href="#">List</a>
-        <a href="#">Add New</a>
-        <a href="#">Contact</a>
+        <a href="#" id="navlist">List</a>
+        <a href="#" id="navform">Add New</a>
+        <a href="#" id="navcontact">Contact</a>
       </div>
     </nav>
     <div id="date"></div>
+    <div id="bklist">
+      <h1>The Books I've Read!</h1>
+      <section id="book-list"></section>
+    </div>
 
-    <h1>The Books I've Read!</h1>
-    <section id="book-list"></section>
+    <div id="bkform">
+      <h1>Add a new Book!</h1>
+      <form id="book-form">
+        <div>
+          <input type="text" id="title" placeholder="Title" />
+          <input type="text" id="author" placeholder="Author" />
+          <input type="hidden" id="id" />
+          <button type="submit">Add book</button>
+        </div>
+      </form>
+    </div>
 
-    <h1>Add a new Book!</h1>
-    <form id="book-form">
-      <div>
-        <input type="text" id="title" placeholder="Title" />
-        <input type="text" id="author" placeholder="Author" />
-        <input type="hidden" id="id" />
-        <button type="submit">Add book</button>
+    <div id="bkcontact">
+      <h1>Contact Information</h1>
+      <div class="contact">
+        <div>Do you have any questions or you just want to say "Hello"?
+          <br>You can reach out to us!
+        </div>
+        <ul>
+          <li>E-mail me at  "ncathie214@gmail.com"</li>
+          <li>Reach me on 004358634422</li>
+          <li>My Address: Streetname 22, 84503 City, Country</li>
+        </ul>
       </div>
-    </form>
-
-    <h1>Contact Information</h1>
-    <div class="contact">
-      <div>Do you have any questions or you just want to say "Hello"?
-        <br>You can reach out to us!
-      </div>
-      <ul>
-        <li>E-mail me at  "ncathie214@gmail.com"</li>
-        <li>Reach me on 004358634422</li>
-        <li>My Address: Streetname 22, 84503 City, Country</li>
-      </ul>
     </div>
 
     <footer>
@@ -49,5 +54,6 @@
     </footer>
   </main>
   <script src="app.js"></script>
+  <script src="https://moment.github.io/luxon/global/luxon.js"></script>
 </body>
 </html>
