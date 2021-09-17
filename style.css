@@ -118,9 +118,9 @@ form div {
 }
 
 input {
-  height: 40px;
+  height: 45px;
   border: 2px solid black;
-  margin: 10px 0 0;
+  margin: 15px 0 0;
   padding-left: 15px;
   font-size: 1.3em;
 }
@@ -137,7 +137,7 @@ form button {
 .contact {
   width: 70%;
   margin: 0 auto 3em;
-  font-size: 1.2em;
+  font-size: 1.3em;
   line-height: 1.7em;
 }
 
