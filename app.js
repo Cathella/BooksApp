@@ -31,6 +31,7 @@ class UI {
         <div><button class="delete">Remove</button></div>
     `;
     list.appendChild(row);
+    this.displayList();
   }
 
   static deleteBook(el) {
@@ -44,7 +45,7 @@ class UI {
     div.className = `alert-${className}`;
     div.appendChild(document.createTextNode(message));
     const container = document.querySelector('.container');
-    const booklist = document.querySelector('#book-list');
+    const booklist = document.querySelector('#bklist');
     container.insertBefore(div, booklist);
 
     // Disappear in 2 seconds
@@ -117,11 +118,10 @@ class Store {
   }
 }
 
-// Event - display books
-document.addEventListener('DOMContentLoaded', UI.displayBooks);
-
-// Show date
-document.addEventListener('DOMContentLoaded', UI.showDate);
+window.addEventListener('DOMContentLoaded', function() {
+  UI.displayBooks(); // display books
+  UI.showDate(); // Show date
+});
 
 // Event - Add a book
 document.querySelector('#book-form').addEventListener('submit', (e) => {
@@ -132,7 +132,6 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
   const id = `${title} ${author}`;
-  console.log(id);
 
   // validate fields
   if (title === '' || author === '' || id === '') {
