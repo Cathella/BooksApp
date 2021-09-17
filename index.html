@@ -5,19 +5,56 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Books App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>My Book list</h1>
-    <div id="book-list"></div>
-    <form id="book-form">
+  <main class="container">
+    <nav>
+      <div class="logo">Awesome Books</div>
       <div>
-        <input type="text" id="title" placeholder="Title" />
-        <input type="text" id="author" placeholder="Author" />
-        <input type="submit" value="Add book" />
+        <a href="#" id="navlist">List</a>
+        <a href="#" id="navform">Add New</a>
+        <a href="#" id="navcontact">Contact</a>
       </div>
-    </form>
-  </div>
+    </nav>
+    <div id="date"></div>
+
+    <div id="bklist">
+      <h1>The Books I've Read!</h1>
+      <section id="book-list"></section>
+    </div>
+
+    <div id="bkform" class="display-none">
+      <h1>Add a new Book!</h1>
+      <form id="book-form">
+        <div>
+          <input type="text" id="title" placeholder="Title" />
+          <input type="text" id="author" placeholder="Author" />
+          <input type="hidden" id="id" />
+          <button type="submit">Add book</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="bkcontact" class="display-none">
+      <h1>Contact Information</h1>
+      <div class="contact">
+        <div>Do you have any questions or you just want to say "Hello"?
+          <br><br>You can reach out to us!
+        </div>
+        <ul>
+          <li>E-mail me at  "ncathie214@gmail.com"</li>
+          <li>Reach me on 004358634422</li>
+          <li>My Address: Streetname 22, 84503 City, Country</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      Made with 💛 by <a href="https://github.com/Cathella">Nakitto Catherine.</a>
+    </footer>
+  </main>
   <script src="app.js"></script>
+  <script src="https://moment.github.io/luxon/global/luxon.js"></script>
 </body>
 </html>

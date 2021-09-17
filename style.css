@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+* {
+  font-family: 'Comic Neue', cursive;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: .7em 1em;
+  margin: 0 0 .5em 0;
+  font-size: 1.3em;
+}
+
+.logo {
+  font-size: 1.3em;
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  border-right: 2px solid black;
+  padding: 0 1em;
+}
+
+nav a:last-child {
+  border: none;
+  padding-right: 0;
+}
+
+#date {
+  text-align: right;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  margin: 2em 0 01em 0;
+}
+
+.alert-success,
+.alert-danger {
+  background-color: #abf4ab;
+  padding: .7em 1em;
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 1em;
+}
+
+.alert-danger {
+  background-color: #fcb9b9;
+}
+
+section {
+  border: 4px solid black;
+  margin: 0 0 60px 0;
+}
+
+p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  margin: 0;
+  padding: .5em;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+p:nth-child(odd) {
+  background-color: #ccc;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  border: 2px solid black;
+  padding: .3em 1em;
+  box-shadow: 4px 4px 0 black;
+  background-color: #fcb9b9;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #fff;
+}
+
+form {
+  width: 65%;
+  margin: 0 auto 50px;
+
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 45px;
+  border: 2px solid black;
+  margin: 15px 0 0;
+  padding-left: 15px;
+  font-size: 1.3em;
+}
+
+form button {
+  margin: 13px 0;
+  padding: .5em 0;
+  padding: .5em 1em;
+  align-self: flex-end;
+  font-size: 1.3em;
+  background-color: #abf4ab;
+}
+
+.contact {
+  width: 70%;
+  margin: 0 auto 3em;
+  font-size: 1.3em;
+  line-height: 1.7em;
+}
+
+footer {
+  border: 2px solid black;
+  text-align: center;
+  padding: 1em 0;
+  background: #ccc;
+  position: relative;
+  bottom: 0;
+  margin-top: 5em;
+}
+
+footer a {
+  color: black;
+}
+
+.display-none {
+  display: none !important;
+}
