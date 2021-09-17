@@ -1,3 +1,10 @@
+const navlist = document.getElementById('navlist');
+const navform = document.getElementById('navform');
+const navcontact = document.getElementById('navcontact');
+const bklist = document.getElementById('bklist');
+const bkform = document.getElementById('bkform');
+const bkcontact = document.getElementById('bkcontact');
+
 // Book class - to represent a book
 class Book {
   constructor(title, author, id) {
@@ -56,6 +63,24 @@ class UI {
     const showMyDate = document.createElement('div');
     showMyDate.innerHTML = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
     myDate.appendChild(showMyDate);
+  }
+
+  static displayList() {
+    bklist.classList.remove('display-none');
+    bkform.classList.add('display-none');
+    bkcontact.classList.add('display-none');
+  }
+
+  static displayForm() {
+    bklist.classList.add('display-none');
+    bkform.classList.remove('display-none');
+    bkcontact.classList.add('display-none');
+  }
+
+  static displayContact() {
+    bklist.classList.add('display-none');
+    bkform.classList.add('display-none');
+    bkcontact.classList.remove('display-none');
   }
 }
 
@@ -129,3 +154,7 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
   Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
   UI.showAlert('Book Removed', 'success'); // Show success message
 });
+
+navlist.addEventListener('click', UI.displayList);
+navform.addEventListener('click', UI.displayForm);
+navcontact.addEventListener('click', UI.displayContact);

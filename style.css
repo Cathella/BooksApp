@@ -148,3 +148,7 @@ footer {
 footer a {
   color: black;
 }
+
+.display-none {
+  display: none !important;
+}
